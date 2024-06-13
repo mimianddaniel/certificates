@@ -5,7 +5,7 @@ COPY . .
 
 RUN apk add --no-cache curl git make libcap
 RUN make V=1 bin/step-ca
-RUN setcap CAP_NET_BIND_SERVICE=+eip bin/step-ca
+# RUN setcap CAP_NET_BIND_SERVICE=+eip bin/step-ca
 
 FROM smallstep/step-kms-plugin:cloud AS kms
 
